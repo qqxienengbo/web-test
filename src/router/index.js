@@ -1,17 +1,43 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Calculator from '@/components/Calculator.vue'
+import UploadTest from '@/views/UploadTest.vue'
+import Login from '@/views/Login.vue'
+import Layout from '@/views/Layout.vue'
+import UploadExcel from '@/views/UploadExcel'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Layout',
+    component: Layout,
+    children:[
+      {
+        path: '/',
+        name: 'home',
+        component: HomeView
+      },
+      {
+        path: '/Calculator',
+        name: 'Calculator',
+        component: Calculator
+      },
+      {
+        path: '/UploadTest',
+        name: 'UploadTest',
+        component: UploadTest
+      },
+      {
+        path: '/UploadExcel',
+        name: 'UploadExcel',
+        component: UploadExcel
+      },
+    ]
   },
   {
-    path: '/Calculator',
-    name: 'Calculator',
-    component: Calculator
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/about',
