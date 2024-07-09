@@ -22,6 +22,7 @@ import { reactive, ref } from "vue";
 import request from "../util/request";
 import Cookies from 'js-cookie';
 import router from '../router';
+import store from '../store'
 
 
 
@@ -38,6 +39,7 @@ function login(){
             sessionStorage.setItem("user",JSON.stringify(res.data));
             // 把token存到Cookies,有效期1天
             Cookies.set("token",res.data.token,{ expires: 1 });
+            store.commit('setUser',res.data)
             ElMessage.success("登录成功！")
             router.push('/')
         }

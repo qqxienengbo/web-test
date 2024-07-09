@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%;margin-top: 100px;">
+  <div style="width: 100%;">
     <div>
       <el-upload
         v-model:file-list="fileList"

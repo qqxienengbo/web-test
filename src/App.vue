@@ -29,7 +29,7 @@ onBeforeMount(()=>{
 
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -49,5 +49,8 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+.main{
+  background:linear-gradient(to bottom,var(--bg1),var(--bg2));
 }
 </style>
