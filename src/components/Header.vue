@@ -6,10 +6,11 @@ import { Fold } from '@element-plus/icons-vue/dist/types';
             <span>XXXX管理系统</span>
         </div>
         <div class="shrink">
-            <el-button type="info" size="small" color="#dedfe0" style="width: 20px; height: 20px"
+            <el-button type="info" size="small" color="#dedfe0"
                 @click="updateIsCollapse">
                 <ElIcon size="15">
-                    <Fold />
+                        <Expand v-if="store.state.isCollapse"/>
+                        <Fold v-else />
                 </ElIcon>
             </el-button>
         </div>
@@ -106,6 +107,14 @@ function logOut(){
     align-items: center;
     height: 100%;
     margin-left: 5px;
+}
+.shrink button{
+    width: 20px;
+    height: 20px;
+    transition: border-radius 0.5s ease;
+}
+.shrink button:hover{
+    border-radius: 50%;
 }
 
 .My {

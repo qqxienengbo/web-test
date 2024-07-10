@@ -9,7 +9,7 @@
           <Menu></Menu>
         </el-aside>
         <el-container>
-          <div>aaaaaaaaaaaaaaaa</div>
+          <MyTabs></MyTabs>
           <el-main style="min-height:460px ;">
             <router-view />
           </el-main>
@@ -24,29 +24,37 @@ import Cookies from "js-cookie";
 import router from "../router";
 import Menu from "../components/Menu.vue"
 import Header from "../components/Header.vue"
+import MyTabs from "../components/MyTabs.vue"
+import { ref } from "vue";
 
-function out() {
-  sessionStorage.removeItem("user");
-  Cookies.remove("token");
-  router.push("/login");
-}
+
 </script>
 
-<style>
+<style scoped>
 .el-header {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #dedfe0;
 }
-.el-footer{
+
+.el-main {
+  display: flex;
+  align-items: center;
+}
+
+.el-footer {
   display: flex;
   align-items: center;
   min-height: 40px;
+  /* justify-content: center; */
+  /* align-content: center; */
   height: 40px;
-}
-.el-footer span{
   width: 100%;
-  align-content: center;
+}
+
+.el-footer span {
+  width: 100%;
+  text-align: center;
   font-size: 10px;
 }
 </style>
