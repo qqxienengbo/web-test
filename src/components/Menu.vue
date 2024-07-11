@@ -16,15 +16,13 @@
         <el-menu-item-group>
           <el-menu-item index="/" id="/" data-label="首页">首页</el-menu-item>
           <el-menu-item index="/Calculator" id="/Calculator" data-label="计算容积">计算容积</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group>
           <el-menu-item index="/UploadTest" id="/UploadTest" data-label="上传">上传</el-menu-item>
           <el-menu-item index="/UploadExcel" id="/UploadExcel" data-label="预览">预览</el-menu-item>
         </el-menu-item-group>
       </el-sub-menu>
-      <el-menu-item index="/">
+      <el-menu-item index="/ECharts" data-label="预览">
         <el-icon><icon-menu /></el-icon>
-        <template #title>Navigator Two</template>
+        <template #title ><span id="/ECharts">ECharts测试</span></template>
       </el-menu-item>
       <el-menu-item index="/">
         <el-icon><setting /></el-icon>
@@ -56,7 +54,7 @@ const handlSelect=(router)=>{
 }
 </script>
 
-<style>
+<style scoped>
 .el-menu-vertical-demo{
   height: 100%;
 }

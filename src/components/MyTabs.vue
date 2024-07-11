@@ -6,7 +6,7 @@
       class="demo-tabs"
       @tab-remove="removeTab"
       @tab-click="clickTab"
-      style="height: 50px"
+      style="height: auto;width: auto;"
     >
     <template v-for="item in store.state.return.tabs" :key="item.title">
         <el-tab-pane :label="item.title" :name="item.router" :closable="(item.title!=='首页')">

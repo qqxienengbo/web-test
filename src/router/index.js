@@ -5,6 +5,7 @@ import UploadTest from '@/views/UploadTest.vue'
 import Login from '@/views/Login.vue'
 import Layout from '@/views/Layout.vue'
 import UploadExcel from '@/views/UploadExcel'
+import ECharts from '@/components/ECharts.vue'
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
         path: '/UploadExcel',
         name: 'UploadExcel',
         component: UploadExcel
+      },
+      {
+        path: '/ECharts',
+        name: 'ECharts',
+        component: ECharts
       },
     ]
   },
